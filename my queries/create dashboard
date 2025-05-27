@@ -1,0 +1,11 @@
+SELECT DATENAME(month, Date) as OrderMonth,
+  DATENAME(year, Date) as OrderYear,
+  CONCAT(FirstName, ' ', LastName) as SalespersonName,
+  COUNT(1) as Amount of Orders,
+  SUM(Total Due) as Total Due
+FROM V_Orders O
+  JOIN Salesperson S ON O.SalespersonID = S.SalespersonID
+GROUP BY 
+  DATENAME(month, Date),
+  DATENAME(YEAR, Date),
+  CONCAT (FirstName, ' ', LastName)
