@@ -1,3 +1,4 @@
+Create View StringFunctions1 AS
 SELECT TRIM(
     'M'
     FROM ProductCode

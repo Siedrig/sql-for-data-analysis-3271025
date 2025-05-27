@@ -1,3 +1,10 @@
+CREATE VIEW CountOrders ASINSERT INTO CountOrders (CustomerID, FirstName, LastName, OrderID)
+VALUES (
+    CustomerID:int,
+    'FirstName:varchar',
+    'LastName:varchar',
+    OrderID:int
+  );
 SELECT C.CustomerID,
   C.FirstName,
   C.LastName,
