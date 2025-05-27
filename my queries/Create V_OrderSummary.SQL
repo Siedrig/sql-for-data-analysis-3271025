@@ -1,7 +1,7 @@
-BEGIN;
 CREATE OR REPLACE VIEW V_OrderSummary AS
 SELECT MONTH(OrderDate) as OrderMonth,
   YEAR(OrderDate) as OrderYear,
+  State,
   Salesperson,
   COUNT(1) as AmountofOrders,
   SUM(TotalDue) as TotalSales
@@ -10,4 +10,3 @@ FROM V_Orders
 GROUP BY MONTH(OrderDate),
   YEAR(OrderDate),
   Salesperson;
-COMMIT;
