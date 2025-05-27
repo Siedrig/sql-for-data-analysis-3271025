@@ -1,8 +1,8 @@
-insert into Customer (
+BEGIN;
+INSERT INTO Customer (
     CustomerID,
     FirstName,
     LastName,
-    
     Email,
     Phone,
     Address,
@@ -10,7 +10,7 @@ insert into Customer (
     State,
     Zipcode
   )
-values (
+VALUES (
     4967,
     'Carolina',
     'Alvarenga',
@@ -20,4 +20,5 @@ values (
     'São Paulo',
     'SP',
     '01234-567'
-  )
+  );
+  COMMIT;

@@ -1,8 +1,3 @@
-
-Update Customer
-SET Email = 'randy92@mail.com'
-WHERE CustomerID = '999';
-
-SELECT Email
+SELECT *
 FROM Customer
-WHERE CustomerID = '999';
+WHERE CustomerID = 4967;
